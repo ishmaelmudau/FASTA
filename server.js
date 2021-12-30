@@ -11,7 +11,7 @@ const axios = require ('axios');
 //     console.log(err)
 // })
 
-
+// This is for challage one 
 fs.readFile('testData', function(err, data) {
     if(err) throw err;
     var array = data.toString().split("\n");
@@ -27,24 +27,6 @@ fs.readFile('testData', function(err, data) {
         }
     }
     console.log(increaseCounter)
-    
-    // for(line in array) {
-    //     if (array[line +1] > array[line] ){
-    //         console.log("Increase")
-    //     }else if(array[line + 1] < array[line]) {
-    //         console.log("Decrease")
-    //     }else {
-    //         console.log("No Change")
-    //     }
-    // }
+
 })
 
-
-// var server = http.createServer(function(req, res) {
-//     res.writeHead(200, { "Content-type": "text/plain" });
-//     res.end("Hello world\n");
-// });
-
-// server.listen(3000, function() {
-//     console.log('Server is running at 3000')
-// });
