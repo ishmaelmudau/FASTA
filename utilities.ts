@@ -11,3 +11,4 @@ export function stdin() {
 export function strings(): string[] {
     return stdin().split("\n");
 }
+// Supports the TS code base
