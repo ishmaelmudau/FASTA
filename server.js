@@ -1,32 +1,34 @@
 var http = require('http');
 var fs = require('fs');
-const axios = require ('axios');
+import {numbers} from ("./utilities")
 
-// 'Puzzle inputs differ by user.  Please log in to get your puzzle input.\n'
-//  Thats a bummer
-// axios.post('https://adventofcode.com/2021/day/1/input')
-// .then(response => {
-//     console.log(response)
-// }).catch(err => {
-//     console.log(err)
-// })
-
-// This is for challage one 
+//JS solution
 fs.readFile('testData', function(err, data) {
     if(err) throw err;
-    var array = data.toString().split("\n");
+    const depthdepthArray = data.toString().split("\n");
     var increaseCounter = 0;
-    for(var i = 0; i < array.length; i++) {
-        if (array[i +1] > array[i] ){
-            console.log("Increase", array[i] , " ", array[i +1])
+    for(let i = 1; i < depthArray.length; i++) {
+        if (depthArray[i] > depthArray[i - 1] ){
+            console.log("Increase", depthArray[i] , " ", depthArray[i +1])
             increaseCounter++;
-        }else if(array[i + 1] < array[i]) {
-            console.log("Decrease", array[i] , " ", array[i +1])
-        }else {
-            console.log("No Change", array[i] , " ", array[i +1])
         }
     }
     console.log(increaseCounter)
 
 })
 
+// TypeScript solution 
+
+// fs.readFile('testData', function(err, data) {
+//     if(err) throw err;
+//     const depthdepthArray = data.toString().split("\n");
+//     let increaseCounter = 0;
+//     for (let i = 1; i < depthArray.length; i++) {
+//         if (depthArray[i] > depthArray[i - 1]) {
+//             increaseCounter++;
+//         }
+//     }
+
+//     console.log(increaseCounter);
+
+// })
